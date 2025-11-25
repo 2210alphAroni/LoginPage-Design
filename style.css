@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #00c6ff;
+}
+
+.center-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    font-size: medium;
+}
+
+.form-section form{
+    width: 400px;
+    height: 430px;
+    box-shadow: 0px 0px 10px 2px yellow;
+    border-radius: 8px;
+    padding: 30px 0px;
+    margin: auto;
+}
+
+.form-section form h3{
+    font-size: 25px;
+    font-weight: 700;
+    font-family: monospace;
+    text-align: center;
+}
+
+.form-section form hr{
+    width: 15%;
+    margin: auto;
+    color: yellow;
+}
+
+.username label , .password label{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.username input ,.password input{
+    width: 100%;
+    padding: 7px 7px;
+    border-radius: 15px;
+    border: 1px solid yellow;
+}
+
+.username{
+    position: relative;
+}
+
+.fa-person{
+    position: absolute;
+    right: 60px;
+    top: 58px;
+    cursor: pointer;
+    color: #555;
+}
+
+.password{
+    position: relative;
+}
+
+.fa-eye{
+    position: absolute;
+    right: 60px;  
+    top: 43px; 
+    cursor: pointer;
+    color: #555;
+}
+
+.fa-eye-slash{
+    position: absolute;
+    right: 60px;  
+    top: 43px; 
+    cursor: pointer;
+    color: #555;
+}
+
+.sign-btn{
+    text-align: center;
+}
+
+button{
+    width: 77%;
+    margin: auto;
+}
+
+.showhidepass a span, .showhidepass a{
+    color: black;
+    text-decoration: none;
+
+}
+
+
+@media (max-width: 992px){
+    .fa-person, .fa-eye , .fa-eye-slash{
+        right: 35px;
+        font-size: 17px;
+    }
+
+    .sign-btn button{
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px){
+    .fa-person, .fa-eye , .fa-eye-slash{
+        right: 35px;
+        font-size: 17px;
+    }
+
+    .sign-btn button{
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px){
+    .fa-person, .fa-eye, .fa-eye-slash{
+        right: 32px;
+        font-size: 17px;
+    }
+
+    .sign-btn button{
+        width: 90%;
+    }
+}
+
+@media (max-width: 420px){
+    .form-section form{
+        width: 300px;
+        padding: 20px 0;
+    }
+
+    .fa-person, .fa-eye, .fa-eye-slash{
+        right: 27px;
+        font-size: 17px;
+    }
+
+    .sign-btn button{
+        width: 90%;
+    }
+}
+
+@media (max-width: 350px){
+    .form-section form{
+        width: 250px;
+    }
+
+    .fa-person, .fa-eye, .fa-eye-slash{
+        right: 25px;
+    }
+
+    .sign-btn button{
+        width: 90%;
+    }
+}
+
