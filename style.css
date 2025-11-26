@@ -86,6 +86,7 @@ h1{
 
 .sign-btn{
     text-align: center;
+    position: relative;
 }
 
 button{
@@ -93,15 +94,14 @@ button{
     margin: auto;
 }
 
-.sign-btn button span .fa-spinner{
-    background-color:#212529;
+.sign-btn .fa-spinner{
+    background: none;
+    color: white;
     font-size: 25px;
-     display: none; 
-}
-
-.fa-spinner {
-  display: inline-block;
-  animation: spin 1s linear infinite;  
+    position: absolute;
+    left: 185px;
+    display: none; 
+    animation: spin 1s linear infinite;
 }
 
 /* For rotation */

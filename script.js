@@ -3,9 +3,12 @@
 let passwordIcon = document.querySelector(".fa-eye")
 let usernametype = document.querySelector(".username input")
 let passwordtype = document.querySelector(".password input");
-let icon = document.querySelector('.sign-btn button span .fa-spinner');
+let icon = document.querySelector('.sign-btn .fa-spinner');
 let checkboxtype = document.querySelector(".checkbox-area input")
+
+// use global variable declaration for json access credential
 let userData;
+// load function which I apply for get access json credential file 
 loadRoniAhmedJsonData();
 passwordIcon.addEventListener("click", () => {
     if (passwordtype.type == 'password') {
@@ -20,28 +23,38 @@ passwordIcon.addEventListener("click", () => {
     }
 })
 
+// use this function json credential access
 function loadRoniAhmedJsonData() {
     fetch('credential.json')
         .then(res => res.json())
         .then(data => userData = data.data);
 }
-//  if username and password match the show suceess otherwise error.
 
+//  if username and password match the show suceess otherwise error.
 let btn = document.querySelector(".btn-dark")
 let h1tag = document.querySelector("h1")
 
 btn.addEventListener("click", () => {
-     btn.textContent ='';
-     icon.style.display ='block'
-   
-   
- 
-    if (usernametype.value === "" ) {
+
+    // Use for sign in text and load icon adjust
+    btn.style.display="none";
+    icon.style.display="inline-block";
+    icon.classList.add("fa-spinner")
+
+    setTimeout(()=>{
+        btn.style.display="inline";
+        icon.style.display="none";
+        icon.classList.remove("fa-spinner")
+    },3000)
+    // end
+
+    // use for input get access when button click
+    if (usernametype.value === "") {
         alert("Please enter userName fields!")
         h1tag.innerHTML = "Please enter username";
         usernametype.classList.add('errorPass')
-    } 
-    else if(passwordtype.value === ""){
+    }
+    else if (passwordtype.value === "") {
         alert("Please enter Password fields!")
         h1tag.innerHTML = "Please enter password";
         passwordtype.classList.add('errorPass')
@@ -52,9 +65,11 @@ btn.addEventListener("click", () => {
             alert("Login Failed");
         } else {
             alert("Login Success");
-            localStorage.setItem('userName',usernametype.value);
-            localStorage.setItem('password',passwordtype.value);
-            localStorage.setItem('remembar',checkboxtype.value == 'on' ? 'true':'false');
+
+            // use localstorage for save current success login in localstorage inside developer tools Aplication
+            localStorage.setItem('userName', usernametype.value);
+            localStorage.setItem('password', passwordtype.value);
+            localStorage.setItem('remembar', checkboxtype.value == 'on' ? 'true' : 'false');
         }
 
         //         userData.forEach((x ,i)=> {
@@ -80,5 +95,5 @@ btn.addEventListener("click", () => {
     //     alert("Login Fail")
     // }
 
-  
+
 })
