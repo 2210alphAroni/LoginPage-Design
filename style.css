@@ -183,6 +183,7 @@ button {
     .sign-btn button {
         width: 90%;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -197,6 +198,7 @@ button {
     .sign-btn button {
         width: 90%;
     }
+
 }
 
 @media (max-width: 420px) {
@@ -215,6 +217,10 @@ button {
     .sign-btn button {
         width: 90%;
     }
+
+    .sign-btn .fa-spinner {
+        left: 120px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -231,6 +237,10 @@ button {
     .sign-btn button {
         width: 90%;
     }
+
+    .sign-btn .fa-spinner {
+        left: 120px;
+    }
 }
 
 @media (max-width: 300px) {
@@ -246,5 +256,9 @@ button {
 
     .sign-btn button {
         width: 90%;
+    }
+
+    .sign-btn .fa-spinner {
+        left: 120px;
     }
 }
