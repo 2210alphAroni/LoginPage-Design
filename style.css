@@ -93,10 +93,32 @@ button{
     margin: auto;
 }
 
+.sign-btn button span .fa-spinner{
+    background-color:#212529;
+    font-size: 25px;
+     display: none; 
+}
+
+.fa-spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;  
+}
+
+/* For rotation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 .showhidepass a span, .showhidepass a{
     color: black;
     text-decoration: none;
 
+}
+
+.errorPass{
+    border: 4px solid red !important;
 }
 
 
@@ -162,4 +184,3 @@ button{
         width: 90%;
     }
 }
-
