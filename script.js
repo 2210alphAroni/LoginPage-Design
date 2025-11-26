@@ -23,7 +23,12 @@ let btn=document.querySelector(".btn-dark")
 let h1tag=document.querySelector("h1")
 
 btn.addEventListener("click",()=>{
-    if(usernametype.value == passwordtype.value){
+
+    if(usernametype.value === "" && passwordtype.value === ""){
+        alert("Please enter both fields!")
+        h1tag.innerHTML="Please enter username & password";
+    }
+    else if(usernametype.value === passwordtype.value){
         h1tag.innerHTML="Login Successful";
         alert("Login Success")
     }
