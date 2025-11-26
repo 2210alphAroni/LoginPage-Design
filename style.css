@@ -96,7 +96,7 @@ button{
 
 .sign-btn .fa-spinner{
     background: none;
-    color: white;
+    color: black;
     font-size: 25px;
     position: absolute;
     left: 185px;

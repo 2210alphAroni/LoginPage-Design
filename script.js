@@ -45,7 +45,7 @@ btn.addEventListener("click", () => {
         btn.style.display="inline";
         icon.style.display="none";
         icon.classList.remove("fa-spinner")
-    },3000)
+    },6000)
     // end
 
     // use for input get access when button click
