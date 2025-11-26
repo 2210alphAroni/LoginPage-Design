@@ -1,24 +1,25 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
     box-sizing: border-box;
-    background-color: #00c6ff;
+    background-color: #4BD7B4;
 }
 
-.center-box{
+.center-box {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.form-section form{
+.form-section form {
     width: 400px;
     height: 430px;
     box-shadow: 0px 0px 10px 2px yellow;
@@ -27,36 +28,45 @@ h1{
     margin: auto;
 }
 
-.form-section form h3{
+.form-section form h3 {
     font-size: 25px;
     font-weight: 700;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
-.form-section form hr{
+.form-section form hr {
     width: 15%;
     margin: auto;
     color: yellow;
 }
 
-.username label , .password label{
+.username label,
+.password label {
     font-size: 20px;
     font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.username input ,.password input{
+.username input,
+.password input {
     width: 100%;
     padding: 7px 7px;
     border-radius: 15px;
     border: 1px solid yellow;
+    background-color: #98E867;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.username{
+.checkbox-area label {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.username {
     position: relative;
 }
 
-.fa-person{
+.fa-person {
     position: absolute;
     right: 60px;
     top: 58px;
@@ -65,125 +75,176 @@ h1{
     background: none;
 }
 
-.password{
+.password {
     position: relative;
 }
 
-.fa-eye{
+.fa-eye {
     position: absolute;
-    right: 60px;  
-    top: 43px; 
+    right: 60px;
+    top: 43px;
     cursor: pointer;
     color: #555;
     background: none;
 }
 
-.fa-eye-slash{
+.fa-eye-slash {
     position: absolute;
-    right: 60px;  
-    top: 43px; 
+    right: 60px;
+    top: 43px;
     cursor: pointer;
     color: #555;
     background: none;
 }
 
-.sign-btn{
+.sign-btn {
     text-align: center;
     position: relative;
 }
 
-button{
+button {
     width: 77%;
     margin: auto;
 }
 
-.sign-btn .fa-spinner{
+.sign-btn .btn-dark {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sign-btn .fa-spinner {
     background: none;
     color: black;
     font-size: 25px;
     position: absolute;
     left: 185px;
-    display: none; 
+    display: none;
     animation: spin 1s linear infinite;
 }
 
 /* For rotation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
-.showhidepass a span, .showhidepass a{
+.showhidepass a span,
+.showhidepass a {
     color: black;
     text-decoration: none;
 
 }
 
-.errorPass{
+.showhidepass a span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.register span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.register span strong a {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.errorPass {
     border: 4px solid red !important;
 }
 
 
-@media (max-width: 992px){
-    .fa-person, .fa-eye , .fa-eye-slash{
+@media (max-width: 992px) {
+
+    .fa-person,
+    .fa-eye,
+    .fa-eye-slash {
         right: 35px;
         font-size: 17px;
     }
 
-    .sign-btn button{
+    .sign-btn button {
         width: 90%;
     }
 }
 
-@media (max-width: 768px){
-    .fa-person, .fa-eye , .fa-eye-slash{
+@media (max-width: 768px) {
+
+    .fa-person,
+    .fa-eye,
+    .fa-eye-slash {
         right: 35px;
         font-size: 17px;
     }
 
-    .sign-btn button{
+    .sign-btn button {
         width: 90%;
     }
 }
 
-@media (max-width: 576px){
-    .fa-person, .fa-eye, .fa-eye-slash{
+@media (max-width: 576px) {
+
+    .fa-person,
+    .fa-eye,
+    .fa-eye-slash {
         right: 32px;
         font-size: 17px;
     }
 
-    .sign-btn button{
+    .sign-btn button {
         width: 90%;
     }
 }
 
-@media (max-width: 420px){
-    .form-section form{
+@media (max-width: 420px) {
+    .form-section form {
         width: 300px;
         padding: 20px 0;
     }
 
-    .fa-person, .fa-eye, .fa-eye-slash{
+    .fa-person,
+    .fa-eye,
+    .fa-eye-slash {
         right: 27px;
         font-size: 17px;
     }
 
-    .sign-btn button{
+    .sign-btn button {
         width: 90%;
     }
 }
 
-@media (max-width: 350px){
-    .form-section form{
+@media (max-width: 350px) {
+    .form-section form {
         width: 250px;
     }
 
-    .fa-person, .fa-eye, .fa-eye-slash{
-        right: 25px;
+    .fa-person,
+    .fa-eye,
+    .fa-eye-slash {
+        right: 20px;
     }
 
-    .sign-btn button{
+    .sign-btn button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 300px) {
+    .form-section form {
+        width: 250px;
+    }
+
+    .fa-person,
+    .fa-eye,
+    .fa-eye-slash {
+        right: 18px;
+    }
+
+    .sign-btn button {
         width: 90%;
     }
 }

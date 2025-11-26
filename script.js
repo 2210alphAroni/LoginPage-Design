@@ -37,15 +37,15 @@ let h1tag = document.querySelector("h1")
 btn.addEventListener("click", () => {
 
     // Use for sign in text and load icon adjust
-    btn.style.display="none";
-    icon.style.display="inline-block";
+    btn.style.display = "none";
+    icon.style.display = "inline-block";
     icon.classList.add("fa-spinner")
 
-    setTimeout(()=>{
-        btn.style.display="inline";
-        icon.style.display="none";
+    setTimeout(() => {
+        btn.style.display = "inline";
+        icon.style.display = "none";
         icon.classList.remove("fa-spinner")
-    },6000)
+    }, 6000)
     // end
 
     // use for input get access when button click
@@ -69,7 +69,7 @@ btn.addEventListener("click", () => {
             // use localstorage for save current success login in localstorage inside developer tools Aplication
             localStorage.setItem('userName', usernametype.value);
             localStorage.setItem('password', passwordtype.value);
-            localStorage.setItem('remembar', checkboxtype.value == 'on' ? 'true' : 'false');
+            localStorage.setItem('remember', checkboxtype.value == 'on' ? 'true' : 'false');
         }
 
         //         userData.forEach((x ,i)=> {
