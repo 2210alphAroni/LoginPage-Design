@@ -116,7 +116,7 @@ button {
     color: black;
     font-size: 25px;
     position: absolute;
-    left: 185px;
+    left: 210px;
     display: none;
     animation: spin 1s linear infinite;
 }
