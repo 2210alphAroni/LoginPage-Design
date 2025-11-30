@@ -34,8 +34,8 @@ function loadRoniAhmedJsonData() {
 let btn = document.querySelector(".btn-dark")
 let h1tag = document.querySelector("h1")
 
-btn.addEventListener("click", () => {
-
+btn.addEventListener("click", (event) => {
+  event.preventDefault();
     // Use for sign in text and load icon adjust
     btn.style.display = "none";
     icon.style.display = "inline-block";
@@ -65,11 +65,14 @@ btn.addEventListener("click", () => {
             alert("Login Failed");
         } else {
             alert("Login Success");
-
             // use localstorage for save current success login in localstorage inside developer tools Aplication
             localStorage.setItem('userName', usernametype.value);
             localStorage.setItem('password', passwordtype.value);
             localStorage.setItem('remember', checkboxtype.value == 'on' ? 'true' : 'false');
+            
+            // redirect page
+            window.location.href ="dashboard.html";
+
         }
 
         //         userData.forEach((x ,i)=> {
